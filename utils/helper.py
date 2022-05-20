@@ -34,10 +34,7 @@ class chromedriver_init:
         myoptions = Options()
         global driver
         myoptions.headless = True
-        if os.name == 'nt':
-            driver = webdriver.Chrome(path+'\\utils\\chromedriver.exe', options=myoptions)
-        else:
-            driver = webdriver.Chrome(path+'/utils/chromedriver', options=myoptions)
+        driver = webdriver.Chrome(path+'\\utils\\chromedriver.exe', options=myoptions)
         driver.get('https://www.todayindestiny.com')
         chromedriver_init.clear_ads()
         return driver
@@ -66,7 +63,7 @@ class tid_lookup:
         nm = c1[21].text.lower()
         nm2 = ' '.join(elem.capitalize() for elem in nm.split())
         LS_DAT['sectorname']=nm2
-        LS_ACTUAL = utils.txtcln([26])
+        LS_ACTUAL = utils.txtcln(c1[26].text)
         LS_DAT['champs']=LS_ACTUAL.split('Champions: ')[1].split('Burn:')[0].replace('  ',' ')[1:]
         LS_DAT['burn'] = LS_ACTUAL.split('Burn: ')[1].split('Shields:')[0][1:]
         LS_DAT['shield'] = LS_ACTUAL.split('Shields: ')[1].split('Modifiers:')[0][1:]
