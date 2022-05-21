@@ -8,6 +8,10 @@ from discord_slash import SlashCommand, SlashContext
 from discord_slash.utils.manage_commands import create_choice, create_option
 from dotenv import load_dotenv
 import os
+from pyvirtualdisplay import Display
+if os.name != 'nt':
+    display = Display(visible=0, size=(1920, 1080))
+    display.start()
 load_dotenv()
 BOT_ID = os.getenv("BOT_ID")
 
