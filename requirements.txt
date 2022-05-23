@@ -1,4 +1,4 @@
-discord.py==1.7.3
-discord_py_slash_command==3.0.3
-python-dotenv==0.20.0
-selenium==4.1.5
+discord.py
+discord_py_slash_command
+python-dotenv
+selenium
