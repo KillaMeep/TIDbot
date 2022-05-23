@@ -12,6 +12,7 @@ sudo wget https://chromedriver.storage.googleapis.com/101.0.4951.41/chromedriver
 sudo unzip chromedriver_linux64.zip
 sudo rm -rf chromedriver_linux64.zip
 cd ../..
+sudo chmod ugo+rwx TIDbot
 echo Install complete. Edit .env with bot id.
 echo Removing installer.
 sudo rm -rf inst.sh
