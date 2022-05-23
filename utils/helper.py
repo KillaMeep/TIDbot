@@ -37,7 +37,7 @@ class chromedriver_init:
         if os.name == 'nt':
             driver = webdriver.Chrome(path+'\\utils\\chromedriver.exe', options=myoptions)
         else:
-            driver = webdriver.Chrome(path+'/utils/chromedriver', options=myoptions)
+            driver = webdriver.Chrome('/usr/bin/chromedriver', options=myoptions)
         driver.get('https://www.todayindestiny.com')
         chromedriver_init.clear_ads()
         return driver
